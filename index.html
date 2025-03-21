@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartUI Training Scenarios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "Segoe UI", sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .scenario {
+      text-align: center;
+      cursor: pointer;
+    }
+    .scenario img {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+    }
+    .scenario img:hover {
+      transform: scale(1.03);
+    }
+    .scenario p {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click a Customer to Launch Their Scenario</h1>
+  <div class="grid">
+
+    <div class="scenario" onclick="launchScenario('priya')">
+      <img src="images/scenario_images/Priya.jpg" alt="Priya" />
+      <p>Priya has made a payment and the money has left her bank but it isn't showing on the meter. Help Priya find where her payment has gone.</p>
+    </div>
+
+    <div class="scenario" onclick="launchScenario('hiroshi')">
+      <img src="images/scenario_images/Hiroshi.jpg" alt="Hiroshi" />
+      <p>Hiroshi </p>
+    </div>
+
+    <div class="scenario" onclick="launchScenario('carlos')">
+      <img src="images/scenario_images/Carlos.jpg" alt="Carlos" />
+      <p>Carlos</p>
+    </div>
+
+    <div class="scenario" onclick="launchScenario('josh')">
+      <img src="images/scenario_images/Josh.jpg" alt="Josh" />
+      <p>Josh</p>
+    </div>
+
+    <div class="scenario" onclick="launchScenario('amina')">
+      <img src="images/scenario_images/Amina.jpg" alt="Amina" />
+      <p>Amina</p>
+    </div>
+
+    <div class="scenario" onclick="launchScenario('margaret')">
+      <img src="images/scenario_images/Margaret.jpg" alt="Margaret" />
+      <p>Margaret</p>
+    </div>
+
+  </div>
+
+  <script>
+    function launchScenario(name) {
+      window.open("html/openingpage.html?scenario=" + name, "_blank");
+      window.open("html/UI5.html", "_blank");
+    }
+  </script>
+</body>
+</html>
